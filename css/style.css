@@ -1,50 +1,109 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+     background-color: #000;
+     font-family: 'Lato', sans-serif;
 }
 
 
+#users-grid{
+    width: 95vw;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    z-index: 1;
+}
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4px 0px;
+    height: auto;
 
+}
 
+.top-bar-btn{
+    display: flex;
+    padding: 6px 7px;
+    margin-left: 8px;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #4a4a4a;
+    border-radius: 4px;
+}
 
-
-/* -------------------- Debug -------------------- */
+#top-btn .top-bar-btn span{
+   padding-left: 6px;
+}
 
 #top-btn{
-    background-color: aquamarine;
-    padding: 10px 0px;
+    padding: 6px;
     position: fixed;
     top: 0;
     right: 0;
     display: flex;
     justify-content: flex-end;
-}
-
-#users-grid{
-    padding-top: 40px;
-    padding-bottom: 100px;
-    height: 100vh;
-}
-
-.top-bar-btn{
-    background-color: blue;
-    height: 20px;
-    width: 30px;
-    padding: 2px;
-    margin-left: 8px;
+    z-index: 10;
 }
 
 .user-card{
-    width: calc(100vw/7);
-    background-color: red;
-    height: 150px;
+    width: calc((100% / 7) - 8px);
+    height: auto;
+    position: relative;
+    font-size: 14px;
 }
+
+.user-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:#1d2022ba;
+    padding: 10px;
+    color: #fff;
+}
+
+.user-card img{
+    object-fit: cover;
+    width: 100%;
+    height: 8vw;
+}
+
+.video-utility{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.utility{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin: 0px 4px;
+}
+
+.utility.has-chevron:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f106";
+}
+
+
+
+/* -------------------- Debug -------------------- */
+
+
+
 
 #bottom-bar{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: blueviolet;
-    height: 80px;
+    background-color: #222222;
+    height: 70px;
 }
